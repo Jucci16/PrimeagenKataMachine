@@ -16,9 +16,10 @@ public class TwoCrystalBallsTest
         {
             if (i >=  index) array[i] = true;
             else array[i] = false;
+            i++;
         }
 
-        Assert.Equal(TwoCrystalBalls.MaxHeight(array), index);
-        Assert.Equal(TwoCrystalBalls.MaxHeight(new bool[] { false, false, false, false }), index - 1);
+        Assert.Equal(index, TwoCrystalBalls.MaxHeight(array));
+        Assert.Equal(-1, TwoCrystalBalls.MaxHeight(new bool[] { false, false, false, false }));
     }
 }
