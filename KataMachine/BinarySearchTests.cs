@@ -6,7 +6,7 @@ public class BinarySearchTests
     [Fact]
     public void DoBinarySearch()
     {
-        var numbers = Utilities.GenerateIntArray();
+        var numbers = Utilities.GenerateSortedIntArray();
         Assert.True(BinarySearch.Search(numbers, 69));
         Assert.False(BinarySearch.Search(numbers, 1336));
         Assert.True(BinarySearch.Search(numbers, 69420));

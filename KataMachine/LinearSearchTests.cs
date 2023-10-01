@@ -11,7 +11,7 @@ public class LinearSearchTests
     [Fact]
     public void DoLinearSearch()
     {
-        int[] numbers = Utilities.GenerateIntArray();
+        int[] numbers = Utilities.GenerateSortedIntArray();
         Assert.True(LinearSearch.Search(numbers, 69));
         Assert.False(LinearSearch.Search(numbers, 1336));
         Assert.True(LinearSearch.Search(numbers, 69420));
