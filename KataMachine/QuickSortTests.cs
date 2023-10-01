@@ -1,0 +1,20 @@
+﻿using Core.QuickSort;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KataMachine;
+public class QuickSortTests
+{
+    [Fact]
+    public void TestQuickSort()
+    {
+        var sorted = Utilities.GenerateSortedIntArray();
+        var unSorted = Utilities.GenerateUnSortedIntArray();
+        var quickSorted = QuickSort.Sort(unSorted);
+
+        Assert.True(Utilities.CompareIntArrays(sorted, unSorted));
+    }
+}
