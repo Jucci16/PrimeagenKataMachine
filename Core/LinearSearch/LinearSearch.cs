@@ -9,7 +9,12 @@ public static class LinearSearch
 {
     public static bool Search(IEnumerable<int> haystack, int needle)
     {
-        throw new NotImplementedException();
+        foreach(var check  in haystack)
+        {
+            if (check == needle) return true;
+        }
+
+        return false;
     }
 
 }
