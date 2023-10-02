@@ -1,27 +1,34 @@
 ﻿using Core.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.Stack;
 public class Stack<T> : IStack<T>
 {
-    public int Length => throw new NotImplementedException();
+    public int Length {get; set;}
+
+    private StackNode<T>? _head;
 
     public T? Peek()
     {
-        throw new NotImplementedException();
+        var value = _head is null ? default : _head.Value;
+        return value;
     }
 
     public T? Pop()
     {
-        throw new NotImplementedException();
+        if (Length == 0) return default;
+        --Length;
+
+        var head  = _head!;
+        _head = head.Previous;
+
+        return head.Value;
     }
 
     public void Push(T item)
     {
-        throw new NotImplementedException();
+        ++Length;
+        var node = new StackNode<T>(item);
+        node.Previous = _head;
+        _head = node;
     }
 }
