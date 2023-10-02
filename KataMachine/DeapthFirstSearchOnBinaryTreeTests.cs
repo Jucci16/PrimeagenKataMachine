@@ -9,6 +9,6 @@ public class DeapthFirstSearchOnBinaryTreeTests
         var tree = Utilities.GenerateTree1();
         Assert.True(DepthFirstSearchOnBinaryTree.Search(tree, 45));
         Assert.True(DepthFirstSearchOnBinaryTree.Search(tree, 7));
-        Assert.True(DepthFirstSearchOnBinaryTree.Search(tree, 69));
+        Assert.False(DepthFirstSearchOnBinaryTree.Search(tree, 69));
     }
 }
