@@ -20,7 +20,7 @@ internal static class ListTests
 
         list.Append(11);
         Assert.Equal(9, list.RemoveAt(1));
-        Assert.Equal(-1, list.Remove(9));
+        Assert.Equal(0, list.Remove(9));
         Assert.Equal(5, list.RemoveAt(0));
         Assert.Equal(11, list.RemoveAt(0));
         Assert.Equal(0, list.Length);
