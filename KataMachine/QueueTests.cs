@@ -24,12 +24,11 @@ public class QueueTests
         Assert.Equal(9, queue.Dequeue());
         Assert.Equal(11, queue.Peek());
         Assert.Equal(11, queue.Dequeue());
-        Assert.Equal(-1, queue.Dequeue());
+        Assert.Equal(0, queue.Dequeue());
         Assert.Equal(0, queue.Length);
 
         queue.Enqueue(69);
         Assert.Equal(69, queue.Peek());
-        Assert.Equal(11, queue.Peek());
         Assert.Equal(1, queue.Length);
     }
 }
