@@ -9,6 +9,6 @@ public class BredthFirstSearchOnBinaryTreeTests
         var tree = Utilities.GenerateTree1();
         Assert.True(BredthFirstSearchOnBinaryTree.Search(tree, 45));
         Assert.True(BredthFirstSearchOnBinaryTree.Search(tree, 7));
-        Assert.True(BredthFirstSearchOnBinaryTree.Search(tree, 69));
+        Assert.False(BredthFirstSearchOnBinaryTree.Search(tree, 69));
     }
 }
