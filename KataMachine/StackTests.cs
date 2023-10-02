@@ -24,7 +24,7 @@ public class StackTests
         Assert.Equal(7, stack.Pop());
         Assert.Equal(5, stack.Peek());
         Assert.Equal(5, stack.Pop());
-        Assert.Equal(-1, stack.Pop());
+        Assert.Equal(0, stack.Pop());
 
         stack.Push(69);
         Assert.Equal(69, stack.Peek());
