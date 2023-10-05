@@ -173,7 +173,7 @@ internal static class Utilities
     {
         var weightedNodeList = new List<List<WeightedNode>>();
         weightedNodeList.Add(new List<WeightedNode> {
-            new WeightedNode {To = 1 Weight = 3},
+            new WeightedNode {To = 1, Weight = 3},
             new WeightedNode {To = 2, Weight =1 },
             });
 
